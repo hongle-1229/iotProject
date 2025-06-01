@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+.markazi-text {
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-size:20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+.information{
+    display: flex;
+    margin-top: 60px;
+}
+.left-info{
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 20px;
+    margin-left: 26px;
+    width: 270px;
+    color: black;
+    border-radius: 5px;
+}
+.git-link{
+    color: black;
+    padding-left: 10px;
+}
+.image-pro{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100rem;
+    margin: 33px;
+}
+.right-info{
+    margin-left: 20px;
+}
+.top{
+    display: flex;
+}
+.bottom{
+    display: flex;
+}
+.activity{
+    border-radius: 10px;
+    height: 303px;
+    width: 465px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}

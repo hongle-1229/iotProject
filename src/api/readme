@@ -1,0 +1,11 @@
+🔹 Lấy toàn bộ dữ liệu: /api/data	
+🔹 Lấy dữ liệu theo thông số: /api/data/parameter/:type	
+🔹 Lấy dữ liệu theo thiết bị: /api/data/device/:deviceName	
+🔹 Lấy danh sách thiết bị theo trạng thái : /api/data/devices/:status
+🔹 Tìm kiếm theo dữ liệu: /api/data/search/:parameter/:value
+🔹 Lấy toàn bộ danh sách thiết bị theo trạng thái bật tắt: /api/data/devices_all
+🔹 Lấy thiết bị theo ID: /api/devices/:deviceId
+🔹 Lấy toàn bộ danh sách thiết bị: /api/devices/
+🔹 Lấy toàn bộ dữ liệu theo trang: /api/data/page/:pageNumber
+http://localhost:6000/api/data
+node src/api/server_start.js 

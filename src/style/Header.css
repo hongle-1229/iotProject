@@ -1,0 +1,31 @@
+.title{
+    font-size: 35px;
+    margin: 4px;
+    /* margin-left: 222px; */
+    color: black;
+}
+.header{
+    top: 0;
+    height: 50px;
+    position: fixed;;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+.profile-mini{
+    display: flex;
+}
+.name-profile{
+    font-size: 18px;
+    margin: 10px 10px;
+    color: gray;
+    margin-top: 15px;
+}
+.image-profile{
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 100rem;
+    margin: 5px;
+}

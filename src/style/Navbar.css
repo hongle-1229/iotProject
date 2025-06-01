@@ -1,0 +1,12 @@
+.nav-bar{
+    background-color: rgb(255, 255, 255);
+    width: 230px;
+    height: 670px;
+    margin-top: 10px;
+}
+.nav-bar li{
+    padding: 5px 10px;
+}
+.nav-bar.isActive{
+    color: black;
+}

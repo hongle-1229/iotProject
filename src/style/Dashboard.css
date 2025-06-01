@@ -1,0 +1,225 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+.dash-board {
+    /* position: absolute; */
+    /* width: 100%; */
+    height: 100%;
+    /* top: 0;
+    left: 0;
+    display: flex; */
+    /* background-color: rgb(193, 192, 192); */
+}
+.content{
+    padding-top: 45px;
+    display: flex;
+    background-color: rgb(230, 228, 228);
+}
+.sensor-header{
+    display: flex;
+    height: 120px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    padding-top: 10px;
+}
+.sensor-header p{
+    color: black;
+}
+.title-1{
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.icon-1{
+    color: orange;
+    font-size: 30px;
+    margin-left: 45px;
+}
+.icon-2{
+    color: blue;
+    font-size: 30px;
+    margin-left: 45px;
+}
+.icon-3{
+    color: yellow;
+    font-size: 30px;
+    margin-left: 45px;
+}
+.icon-4{
+    font-size: 30px;
+    margin-left: 45px;
+}
+.icon-5{
+    color: green;
+    font-size: 30px;
+    margin-left: 45px;
+}
+.sensor{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.sensor-1{
+    width: 300px;
+    display: flex;
+    margin-left: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    background-color: white;
+}
+.sensor-2{
+    display: flex;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: gray;
+    background-color: white;
+    border-radius: 5px;
+    width: 310px;
+    margin-left: 33px;
+}
+.sensor-3{
+    display: flex;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: gray;
+    background-color: white;
+    border-radius: 5px;
+    width: 310px;
+    margin-left: 33px;
+}
+.mota{
+    font-size: 50px;
+    padding-top: 20px;
+    /* padding-left: 30px; */
+}
+.sensor-footer{
+    display: flex;
+}
+.sensor-chart{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: gray;
+    background-color: white;
+    border-radius: 5px;
+    height: 483px;
+    width: 1150px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+.sensor-token{
+    width: 230px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* margin-top: 10px; */
+}
+.sensor-token p{
+    color: black;
+}
+.sensor-token-1{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: gray;
+    background-color: white;
+    border-radius: 5px;
+    height: 110px;
+}
+.sensor-token-2{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: gray;
+    background-color: white;
+    border-radius: 5px;
+    height: 110px;
+    margin-top: 15px;
+}
+.sensor-token-3{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: gray;
+    background-color: white;
+    border-radius: 5px;
+    height: 110px;
+    margin-top: 15px;
+}
+.sensor-token-4{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-color: gray;
+    background-color: white;
+    border-radius: 5px;
+    height: 110px;
+    margin-top: 15px;
+}
+.token-1{
+    display: flex;
+    padding: 5px;
+    font-size: 20px;
+}
+.icon-6{
+color: yellow;
+padding-left: 10px;
+padding-top: 5px;
+}
+.icon-7{
+    color: #0051ff;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.icon-8{
+    color: #ff7300;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.icon-9{
+    color: green;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+/* toggle-1 */
+.toggle-button-1{
+    margin-left: 20px;
+    border: none;
+    height: 50px;
+    padding: 7px 23px 7px 23px;
+    margin-top: 25px;
+}
+/* toggle-2 */
+.toggle-button-2{
+    margin-left: 20px;
+    height: 50px;
+    margin-top: 25px;
+}
+/* toggle3 */
+.toggle-button-3{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(108, 98, 100);
+    padding: 5px;
+    border-radius: 100rem;
+    margin: 10px;
+    margin-left: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.toggle-button-3.active{
+    background-color: blue;
+}
+.spinner{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 100rem;
+    transition: all 0.2s linear;
+}
+.spinner.active{
+    transform: translateX(40px);
+}
+
+
+
+

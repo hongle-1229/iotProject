@@ -1,0 +1,5 @@
+express: Framework cho backend.
+mssql: Kết nối SQL Server với Node.js.
+cors: Cho phép React frontend gọi API.
+dotenv: Quản lý biến môi trường.
+body-parser: Xử lý dữ liệu từ frontend

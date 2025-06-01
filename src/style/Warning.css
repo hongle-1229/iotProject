@@ -1,0 +1,16 @@
+@keyframes blink-bg {
+  /* 0%   { background-color: #fff568; } */
+  50%  { background-color: #ff3333; }
+  100% { background-color: #ffee00; }
+}
+
+.warning-blink {
+  animation: blink-bg 0.5s linear infinite;
+  width: 200px;
+  margin-left: 40px;
+  padding: 40px 80px;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
