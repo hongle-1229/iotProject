@@ -1,11 +1,12 @@
 import express from 'express';
 import { sql, poolPromise } from "../config/connect_db.js";
 import mqtt from 'mqtt';
+ 
 
 const router = express.Router();
 
 // Kết nối MQTT 
-const mqttClient = mqtt.connect('mqtt://192.168.1.104:8888', {
+const mqttClient = mqtt.connect('mqtt://10.21.36.33:8888', {
     username: 'HongLe',
     password: 'hongle1229'
 });
@@ -49,7 +50,7 @@ router.post('/receive_device_status', async (req, res) => {
                 VALUES (@deviceName, @status, @time)`);
 
         // trạng thái của thiết bị
-        let led = 0, fan = 0, lamp = 0;
+        let fan=0, led=0, lamp=0;
         if (deviceName.toLowerCase() === 'den') currenStatus.led = status.toLowerCase() === 'on' ? 1 : 0;
         if (deviceName.toLowerCase() === 'quat') currenStatus.fan = status.toLowerCase() === 'on' ? 1 : 0;
         if (deviceName.toLowerCase() === 'dieu_hoa') currenStatus.lamp = status.toLowerCase() === 'on' ? 1 : 0;

@@ -6,7 +6,7 @@ import sql from 'mssql';
 
 
 // Kết nối MQTT 
-const mqttClient = mqtt.connect('mqtt://192.168.1.104:8888', {
+const mqttClient = mqtt.connect('mqtt://10.21.36.33:8888', {
     username: 'HongLe',
     password: 'hongle1229'
 }); 

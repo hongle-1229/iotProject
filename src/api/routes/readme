@@ -1,0 +1,8 @@
+- Quy trình chạy
+  + Sửa tên và pass wifi trong arduino
+  + Sửa địa chỉ ip trong file:  dataRoutesreveive.js
+                                connect_mqtt.js
+                                server.js
+  + Chạy file server.js
+  + Chạy file connect_mqtt.js
+  + Chạy vite

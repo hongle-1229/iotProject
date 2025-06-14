@@ -10,7 +10,13 @@ import mqtt from "mqtt";
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: [
+    'http://localhost:5174',
+    'http://localhost:5173',
+    'http://192.168.30.110',
+    'http://192.168.0.129',
+    'http://10.21.36.33'
+  ], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,               
 }));
@@ -26,7 +32,7 @@ app.use("/api/devices_status", dataRoutesreveive);
 
 // Khai báo biến toàn cục ở đầu file
 let latestWarning = "off";
-const mqttClient = mqtt.connect('mqtt://192.168.1.104:8888', {
+const mqttClient = mqtt.connect('mqtt://10.21.36.33:8888', {
   username: 'HongLe',
   password: 'hongle1229'
 });
@@ -36,7 +42,7 @@ mqttClient.on('message', (topic, message) => {
   if (topic === 'device/warning') {
     try {
       const data = JSON.parse(message.toString());
-      latestWarning = data.warning; // "on" hoặc "off"
+      latestWarning = data.warning; 
       console.log("Updated latestWarning:", latestWarning);
     } catch (e) {
       latestWarning = "off";
@@ -52,7 +58,7 @@ mqttClient.on('connect', () => {
   });
 });
 
-// API trả về trạng thái warning mới nhất
+
 app.get('/api/devices_status/warning', (req, res) => {
   res.json({ warning: latestWarning });
 });

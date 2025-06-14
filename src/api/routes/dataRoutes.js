@@ -202,7 +202,7 @@ router.get("/devices", async (req, res) => {
             FORMAT(TimeOfDay, 'yyyy-MM-dd HH:mm:ss') AS TimeOfDay   
             FROM sensor_device
             ${whereClause}
-            ORDER BY TimeOfDay ASC
+            ORDER BY TimeOfDay DESC
             OFFSET (@pageNumber - 1) * @pageSize ROWS
             FETCH NEXT @pageSize ROWS ONLY
         `;
@@ -247,19 +247,21 @@ router.get("/devices_all", async (req, res) => {
     try {
         const pageNumber = parseInt(req.query.pageNumber) || 1;
         const pageSize = req.query.pageSize ? parseInt(req.query.pageSize) : null;
-        const offset = (pageNumber - 1) * (pageSize ?? 0);
 
         const pool = await poolPromise;
         const request = pool.request();
 
+        // Query cơ bản
         let query = `
             SELECT DeviceID, DeviceName, Statuss,
             FORMAT(TimeOfDay, 'yyyy-MM-dd HH:mm:ss') AS TimeOfDay
             FROM sensor_device
-            ORDER BY TimeOfDay ASC
+            ORDER BY TimeOfDay DESC
         `;
 
-        if (pageSize) {
+        // Nếu có pageSize, thực hiện phân trang
+        if (pageSize && pageSize > 0) {
+            const offset = (pageNumber - 1) * pageSize;
             query += ` OFFSET @offset ROWS FETCH NEXT @pageSize ROWS ONLY`;
             request.input("offset", sql.Int, offset);
             request.input("pageSize", sql.Int, pageSize);
@@ -274,6 +276,7 @@ router.get("/devices_all", async (req, res) => {
         });
 
     } catch (err) {
+        console.error("Lỗi truy vấn devices_all:", err.message);
         res.status(500).json({ error: err.message });
     }
 });
